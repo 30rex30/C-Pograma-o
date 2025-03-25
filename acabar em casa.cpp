@@ -45,7 +45,7 @@ int main()
 		cout<<"Nome:"<<endl;
 		getline(cin, aluno[i].name);
 		cout<<"Truma:"<<endl;
-		getline(cin, aluno[i].name);
+		getline(cin, aluno[i].truma);
 		cout<<"Numero:"<<endl;
 		cin>>aluno[i].n;
 		cout<<"Nota a PSI:"<<endl;
@@ -58,7 +58,7 @@ int main()
 		int P=0; // contar as positivas 
 		int N=0; // contar as negativas
 		int melhor_aluno=0;
-		string maior_nota;
+		int maior_nota=0;
 		
 	
 		for(int i=0; i < 5; i++)
@@ -77,14 +77,16 @@ int main()
 		}
 		cout<<"O numero de Positivas: "<< P <<endl;
 		cout<<"O numero de negativas: "<< N <<endl;
-		
+		int x;
 			for(int i=0; i  < 5; i++)
 			{
-				if(aluno[i].nota_psi > aluno[i].nota_psi)
+				if(aluno[i].nota_psi > maior_nota)
 				{
-					
+					maior_nota = aluno[i].nota_psi;
+					x=i; // ler a melhor nota 
 				}
 			}
+			cout<<"Parabens: "<<aluno[x].name;
 
 	
 }
